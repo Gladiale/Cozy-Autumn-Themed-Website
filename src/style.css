@@ -21,13 +21,18 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* bodyにoverflow: hiddenを設置するとスマホに効かないため、htmlタグに設置します */
+/* 参考：https://irodori-design-web.com/blog/blog-3282 */
+html {
+  overflow: hidden;
+}
+
 body {
   font-family: "Lato", sans-serif;
   background-image: url("/images/bg.png");
   background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
 
   height: 100dvh;
   display: flex;
@@ -314,15 +319,15 @@ header {
     height: 100%; */
   }
 
+  .navbar.active {
+    right: 0;
+  }
+
   .navbar a {
     font-size: 1.9rem;
     margin: 15px 0;
     color: var(--black-color);
     text-align: center;
-  }
-
-  .navbar.active {
-    right: 0;
   }
 
   .menu-icon {
